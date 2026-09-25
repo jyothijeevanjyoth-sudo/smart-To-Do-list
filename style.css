@@ -1,0 +1,194 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f8;
+    color:#222;
+    min-height:100vh;
+}
+header{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+header h2{
+    margin-bottom:10px;
+}
+header p{
+    font-size:16px;
+}
+main{
+    width:90%;
+    max-width:600px;
+    margin:20px auto;
+}
+section{
+    background:white;
+    padding:25px;
+    margin-bottom:25px;
+    border-radius:10opx;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+section h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #333;
+}
+
+form button {
+    grid-column: 1 / -1;
+}
+
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #555;
+}
+
+button:focus {
+    outline: 2px solid #777;
+}
+
+#searchInput {
+    margin-bottom: 15px;
+}
+
+#allBtn,
+#activeBtn,
+#completedBtn {
+    margin-right: 8px;
+    margin-bottom: 15px;
+}
+
+#taskList {
+    list-style: none;
+    margin-top: 20px;
+}
+
+#taskList li {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.task-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.task-due-date {
+    font-size: 13px;
+    color: #666;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.priority {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.priority-low {
+    background: #e8f5e9;
+}
+
+.priority-medium {
+    background: #fff3cd;
+}
+
+.priority-high {
+    background: #f8d7da;
+}
+
+#totalCount,
+#activeCount,
+#completedCount {
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    main {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    form button {
+        grid-column: auto;
+    }
+
+    #taskList li {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #allBtn,
+    #activeBtn,
+    #completedBtn {
+        margin-right: 0;
+    }
+}
+

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Smart To-Do List</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
@@ -15,25 +16,41 @@
 <form id="todoForm">
 <label for="todoInput">Task</label>
 <input id="todoInput" type="text" placeholder="Enter a task">
+
+<label for="priority">Priority</label>
+<select id="priority">
+<option value="Low">Low</option>"
+<option value="Medium">Medium</option>"
+<option value="High">High</option>
+</select>
+
+<label for=""dueDate">Due Date</label>
+<input id="dueDate" type="date">
 <button type="submit">Add Task</button>
 </form>
 </section>
+
 <section>
-<h2>Task List</h2>
+<h2>Tasks</h2>
+<div>
+    <input type="text" id="searchInput" placeholder="Search tasks...">
+    <button type="button" id="allBtn">All</button>
+    <button type="button" id="ActiveBtn">Active</button>
+    <button type="button" id="CompletedBtn">Completed</button>
+</div>
+
+<div>
+    <p>Total: <span id="totalTasks">0</span></p>
+    <p>Active: <span id="activeTasks">0</span></p>
+    <p>Completed: <span id="completedTasks">0</span></p>
+</div>
 <ul id="taskList">
 </ul>
 </section>
-<section>
-
-<ul>
-<li>
-<span>Complete Python Assignment</span>
-<button type="button">Complete</button>
-<button type="button">Edit</button>
-<button type="button">Delete</button>
-</li>
-</ul>
-</section>
 </main>
+<script src="script.js"></script>
 </body>
 </html>
+
+    
+
